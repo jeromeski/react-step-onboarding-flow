@@ -22,14 +22,14 @@ const StepThree = ({
   const circlesRef = useRef([]);
 
   useEffect(() => {
-    const circles = circlesRef;
+    const circles = circlesRef.current;
     const isActive = currentIndex === 2;
     if (isActive) {
       setIsStepThreeVisited(true);
       progressRef.current.style.width = "100%";
-      circles.current[0].style.borderColor = "#3498db";
-      circles.current[1].style.borderColor = "#3498db";
-      circles.current[2].style.borderColor = "#3498db";
+      circles.forEach((circle) => {
+        circle.style.borderColor = "3498db";
+      });
     }
   }, [currentIndex, setIsStepThreeVisited]);
 
