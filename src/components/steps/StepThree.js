@@ -28,7 +28,7 @@ const StepThree = ({
       setIsStepThreeVisited(true);
       progressRef.current.style.width = "100%";
       circles.forEach((circle) => {
-        circle.style.borderColor = "3498db";
+        circle.style.borderColor = "#3498db";
       });
     }
   }, [currentIndex, setIsStepThreeVisited]);
