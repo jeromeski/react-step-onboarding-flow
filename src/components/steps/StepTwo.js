@@ -58,10 +58,10 @@ const StepTwo = ({
           3
         </div>
       </div>
-      <button id="prevTwo" onClick={() => goToPrev()}>
+      <button className="btn btn-default" onClick={() => goToPrev()}>
         Prev
       </button>
-      <button id="nextTwo" onClick={() => goToNext(data)}>
+      <button className="btn btn-default" onClick={() => goToNext(data)}>
         Next
       </button>
     </div>

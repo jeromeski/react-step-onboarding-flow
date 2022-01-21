@@ -52,11 +52,11 @@ const StepThree = ({
           3
         </div>
       </div>
-      <button id="prevThree" onClick={() => goToPrev()}>
+      <button className="btn btn-default" onClick={() => goToPrev()}>
         Prev
       </button>
-      <button id="nextThree" onClick={() => goToNext(data)}>
-        Next
+      <button className="btn btn-default" onClick={() => goToNext(data)}>
+        {isStepThreeVisited ? "Submit" : "Next"}
       </button>
     </div>
   );

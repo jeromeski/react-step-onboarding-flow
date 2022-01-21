@@ -24,14 +24,14 @@ const StepOne = ({
     if (isActive) {
       circles.current[0].style.borderColor = "#3498db";
     }
-  }, []);
+  }, [currentIndex]);
 
   useEffect(() => {
     if (isStepTwoVisited) {
       progressRef.current.style.width = 0;
       setIsStepTwoVisited(false);
     }
-  }, []);
+  }, [isStepOneVisited, isStepTwoVisited, setIsStepTwoVisited]);
   return (
     <div className="container">
       <div className="progress-container">
@@ -49,8 +49,12 @@ const StepOne = ({
           3
         </div>
       </div>
-      <button>Prev</button>
-      <button onClick={() => goToNext(data)}>Next</button>
+      <button disabled={1} className="btn btn-default">
+        Prev
+      </button>
+      <button className="btn btn-default" onClick={() => goToNext(data)}>
+        Next
+      </button>
     </div>
   );
 };

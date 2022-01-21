@@ -79,41 +79,13 @@ body {
 }
 
 .btn.btn-default {
-  /*  */
+  background-color: $line-border-fill;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
 }
 
-.stepTwo-enter-active {
-  .progress {
-    width: 0%;
-  }
-}
-
-.stepTwo-enter-active {
-  .progress {
-    width: 25%;
-  }
-}
-
-.stepTwo-exit {
-  .progress {
-    width: 50%;
-  }
-}
-
-.stepTwo-exit-active {
-  .progress {
-    width: 50%;
-  }
-}
-
-.stepTwo-appear-active {
-  .progress {
-    width: 50%
-  }
-}
-
-.stepTwo-appear-done {
-  .progress {
-    width: 50%
-  }
-}
