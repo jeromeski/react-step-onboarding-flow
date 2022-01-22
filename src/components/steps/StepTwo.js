@@ -42,7 +42,7 @@ const StepTwo = ({
   }, [isStepThreeVisited, setIsStepThreeVisited]);
 
   return (
-    <div className="container">
+    <div className="container text-center">
       <div id="stepTwo" className="progress-container">
         <div
           ref={progressRef}

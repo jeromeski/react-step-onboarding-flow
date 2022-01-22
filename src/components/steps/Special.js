@@ -10,38 +10,23 @@ const data = {
   }
 };
 
-const StepThree = ({
-  goToNext,
-  goToPrev,
-  currentIndex,
-  isStepTwoVisited,
-  setIsStepThreeVisited,
-  isStepThreeVisited
-}) => {
+const Special = ({ goToNext, goToPrev, currentIndex }) => {
   const progressRef = useRef(null);
   const circlesRef = useRef([]);
 
   useEffect(() => {
     const circles = circlesRef.current;
-    const isActive = currentIndex === 2;
-    if (isActive) {
-      setIsStepThreeVisited(true);
-      progressRef.current.style.width = "100%";
-      circles.forEach((circle) => {
-        circle.style.borderColor = "#3498db";
-      });
-    }
-  }, [currentIndex, setIsStepThreeVisited]);
+
+    progressRef.current.style.width = "100%";
+    circles.forEach((circle) => {
+      circle.style.borderColor = "#3498db";
+    });
+  }, []);
 
   return (
     <div id="stepThree" className="container text-center">
       <div className="progress-container">
-        <div
-          ref={progressRef}
-          className={`progress ${
-            isStepTwoVisited && isStepThreeVisited ? "full" : "half"
-          }`}
-        ></div>
+        <div ref={progressRef} className={`progress full`}></div>
         <div ref={(el) => (circlesRef.current[0] = el)} className="circle">
           1
         </div>
@@ -56,10 +41,10 @@ const StepThree = ({
         Prev
       </button>
       <button className="btn btn-default" onClick={() => goToNext(data)}>
-        {isStepThreeVisited ? "Submit" : "Next"}
+        Submit
       </button>
     </div>
   );
 };
 
-export default StepThree;
+export default Special;

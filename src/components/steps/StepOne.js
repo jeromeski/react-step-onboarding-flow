@@ -4,7 +4,8 @@ const data = {
   id: 1,
   name: "Leanne Graham",
   username: "Bret",
-  email: "Sincere@april.biz"
+  email: "Sincere@april.biz",
+  age: 40
 };
 
 const StepOne = ({
@@ -33,7 +34,7 @@ const StepOne = ({
     }
   }, [isStepOneVisited, isStepTwoVisited, setIsStepTwoVisited]);
   return (
-    <div className="container">
+    <div className="container text-center">
       <div className="progress-container">
         <div
           ref={progressRef}
