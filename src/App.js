@@ -50,27 +50,6 @@ export default function App() {
           </UncontrolledOnboardingFlow>
         </div>
       </div>
-      <div className="container">
-        <div className="row">
-          <ControlledOnboardingFlow
-            setCurrentIndex={setCurrentIndex}
-            currentIndex={currentIndex}
-            isStepOneVisited={isStepOneVisited}
-            setIsStepOneVisited={setIsStepOneVisited}
-            isStepTwoVisited={isStepTwoVisited}
-            setIsStepTwoVisited={setIsStepTwoVisited}
-            isStepThreeVisited={isStepThreeVisited}
-            setIsStepThreeVisited={setIsStepThreeVisited}
-            setOnboardingData={setOnboardingData}
-            onNext={onNext}
-          >
-            <StepOne />
-            {onboardingData.age >= 60 && <Special goToPrev={goToPrev} />}
-            <StepTwo />
-            <StepThree goToPrev={goToPrev} />
-          </ControlledOnboardingFlow>
-        </div>
-      </div>
     </Fragment>
   );
 }
